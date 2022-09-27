@@ -1,5 +1,5 @@
 const { Client, Intents, Collection } = require('discord.js');
-const { TOKEN } = require('./JSON/config.json');
+const { token } = require('./JSON/config.json');
 
 const client = new Client({
     intents: [
@@ -16,4 +16,4 @@ client.events = new Collection();
     require(`./handlers/${handler}`)(client);
 });
 
-client.login(TOKEN);
+client.login(token);
